@@ -1,0 +1,11 @@
+.app__body {
+  position: fixed;
+  /* top: 50%; */
+  left: 50%;
+  width: 850px;
+  transform: translate(-50%);
+}
+
+.search__body {
+  margin-bottom: 12px;
+}
