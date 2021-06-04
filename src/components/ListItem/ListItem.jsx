@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import './ListItem.css';
+import PropTypes from 'prop-types';
 
 export default class ListItem extends Component {
   render() {
+    const user = this.props.user;
     return (
-      <div className="list__wrapper">
-        <img
-          src="https://avatars.githubusercontent.com/u/383316?v=4"
-          alt="avatar"
-          className="item__avatar"
-        />
-        <p>test</p>
-      </div>
+      <a
+        className="list__wrapper"
+        href={`https://github.com/${user.login}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src={user.avatar_url} alt="avatar" className="item__avatar" />
+        <p>{user.login}</p>
+      </a>
     );
   }
 }
+
+ListItem.propTypes = {
+  user: PropTypes.object,
+};

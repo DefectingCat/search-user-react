@@ -9,3 +9,9 @@
 .search__body {
   margin-bottom: 12px;
 }
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
